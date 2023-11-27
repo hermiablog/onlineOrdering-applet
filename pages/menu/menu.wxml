@@ -1,0 +1,50 @@
+<!--pages/menu/menu.wxml-->
+<import src="menu.skeleton.wxml" />
+<template is="skeleton" wx:if="{{loading}}" />
+<view class="container">
+  <view class="topBar">
+    <view class="position">
+      <view class="position-Name">
+        <h-icon name="dingwei" color="#333" size="34"></h-icon>
+        <view class="shopName">广州市天河体育中心店</view>
+        <h-icon name="right-line" size="34" color="#999999"></h-icon>
+      </view>
+      <view class="distance">距离您25.8km</view>
+    </view>
+    <view class="takeWay">
+      <view class="takeBtn {{takeWayIndex== 0?'show':''}}" bind:tap="handleTakeWay" data-index="0">自取</view>
+      <view class="takeBtn {{takeWayIndex== 1?'show':''}}" bind:tap="handleTakeWay" data-index="1">外卖</view>
+    </view>
+  </view>
+  <view class="productMenu">
+    <scroll-view class="leftBar" scroll-y="{{true}}">
+      <view class="category {{navLeftIndex === index ? 'active-category':''}}" wx:for="{{navLeftItems}}" wx:key="index" bind:tap="handleSwitch" data-index="{{index}}">
+        <view class="divider  {{navLeftIndex === index ? 'active-divider':''}}"></view>
+        <view class="category-name">{{item}}</view>
+      </view>
+    </scroll-view>
+    <scroll-view class="rightBar" scroll-y="{{true}}">
+      <image class="topBanner-img" src="https://img2.baidu.com/it/u=228681550,2355063694&fm=253&fmt=auto&app=138&f=JPEG?w=1371&h=500" mode="aspectFill" />
+      <view class="menuList">
+        <view class="categoryItem" wx:for="{{navRightItems[navLeftIndex]}}" wx:key="category_id">
+          <view class="categoryTitle">{{item.title}}</view>
+          <view class="product-list" wx:for="{{item.product}}" wx:key="id" wx:for-item="productData" bind:tap="handleToDetail" data-id="{{productData.id}}">
+            <image class="product-cover" src="{{productData.productImg}}" mode="" />
+            <view class="product-show">
+              <view class="product-title">{{productData.productName}}</view>
+              <view class="product-desc">{{productData.desc}}</view>
+              <view class="price-num">
+                <view class="product-price">￥ {{productData.favorablePrice}}
+                </view>
+                <h-icon name="zengjia1" size="42" color="#FF5762"></h-icon>
+              </view>
+            </view>
+          </view>
+        </view>
+        <view wx:if="{{!navRightItems[navLeftIndex]}}" class="emptyContent">暂时还没有数据哦~</view>
+      </view>
+    </scroll-view>
+  </view>
+  <h-product-detail detailFlag="{{detailFlag}}" detailInfo="{{detailInfo}}">
+  </h-product-detail>
+</view>

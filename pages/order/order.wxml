@@ -1,0 +1,62 @@
+<!--pages/order/order.wxml-->
+<wxs src="/common/wxs/touchMove.wxs" module="touchMove" />
+<view class="OrderContent" wx:if="{{acountList.length>0}}">
+  <view class="topBar">
+    <view class="topBarItem {{currentTabIndex==index?'activeItem':''}}" wx:for="{{tabsList}}" wx:key="index" bind:tap="handleTopBar" data-index="{{index}}">
+      <view class="itemText">{{item}}</view>
+      <view class="divider {{currentTabIndex==index?'activeBar':''}}"></view>
+    </view>
+  </view>
+  <!-- 手指滑动切换 -->
+  <view class="tab-panel" bind:touchstart="{{touchMove.handlerTouchStart}}" bind:touchend="{{touchMove.handlerTouchEnd}}">
+    <block wx:if="{{currentTabIndex===0||currentTabIndex===1}}">
+      <view class="orderList">
+        <view class="productContent" wx:for="{{acountList}}" wx:key="index">
+          <view class="topText">
+            <view class="orderNum">配送订单：{{orderNum}}</view>
+            <view class="orderStatus">待支付</view>
+          </view>
+          <view class="product">
+            <image class="productCover" src="{{item.productImg}}" mode="" />
+            <view class="productInfo">
+              <view class="title">{{item.productName}}</view>
+              <view class="specsAll">
+                <view class="specsInfo" wx:for="{{item.specs}}" wx:key="index" wx:for-item="specsDesc">
+                  <block wx:for="{{specsDesc.specsDesc}}" wx:key="index">
+                    {{item.isActive==true?item.title:''}}
+                  </block>
+                </view>
+              </view>
+              <view class="price-num">
+                <view class="price">￥ {{item.favorablePrice}}</view>
+                <view class="num">x{{item.numInCart}}</view>
+              </view>
+            </view>
+          </view>
+        </view>
+      </view>
+      <view class="payWrap">
+        <view class="product-price">
+          <text>商品总金额</text>
+          <view class="totalMoney">￥{{acountMoney}}</view>
+        </view>
+        <view class="freight">
+          <text>运费</text>
+          <view class="freight-desc">+￥0.00</view>
+        </view>
+        <view class="diviBar"></view>
+        <view class="actual">
+          <text>实付金额：</text>
+          <view class="actual-price">￥{{acountMoney}}</view>
+        </view>
+        <button class="toWePay" bind:tap="handleToPay">微信支付</button>
+      </view>
+    </block>
+    <view wx:else class="emptyData">
+      暂无数据哦
+    </view>
+  </view>
+</view>
+<view class="container" wx:else>
+  <h-empty-show type="{{'order'}}"></h-empty-show>
+</view>

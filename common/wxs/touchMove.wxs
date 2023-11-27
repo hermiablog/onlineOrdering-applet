@@ -1,0 +1,29 @@
+//触摸开始位置
+var clientStart;
+function handlerTouchStart(e) {
+  clientStart = e.changedTouches[0].clientX
+}
+
+function handlerTouchEnd(e, ownerInstance) {
+  //触摸结束位置
+  var clientEnd = e.changedTouches[0].clientX;
+  //计算滑动距离
+  var distance = clientEnd - clientStart;
+  //状态值 灵敏度=70
+  var direction = 0;
+  if (distance < -70) {
+    direction = -1
+  }
+  if (distance > 70) {
+    direction = 1
+  }
+  //优化：只有direction改变时才调用函数
+  if (direction !== 0) {
+    //调用组件中的handlerTouchMove函数，并向其传入direction的值
+    ownerInstance.callMethod("handlerTouchMove", { direction: direction })
+  }
+}
+module.exports = {
+  handlerTouchStart: handlerTouchStart,
+  handlerTouchEnd: handlerTouchEnd
+}

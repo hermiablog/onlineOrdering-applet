@@ -1,0 +1,87 @@
+/* pages/user/user.wxss */
+@use "../../sass/mixins"as *;
+@use "../../sass//wh100";
+
+.container {
+  height: 100vh;
+  padding: 30rpx;
+
+  // login start
+  .login {
+    @include flex(space-around, center);
+    width: 100%;
+    height: 250rpx;
+    background-image: linear-gradient(to right, #FF5762, #FF7B62);
+    border-radius: 20rpx;
+    padding: 0 25rpx;
+
+    .avatar {
+      width: 130rpx;
+      height: 130rpx;
+      border-radius: 50%;
+    }
+
+    .statusText {
+      flex: 1;
+      color: #fff;
+      letter-spacing: 2rpx;
+      padding: 0 10rpx 0 20rpx;
+    }
+
+    .register {
+      width: 150rpx;
+      height: 70rpx;
+      line-height: 70rpx;
+      background-color: rgb(252, 223, 130);
+      color: #fff;
+      font-size: 28rpx;
+      border-radius: 10rpx;
+    }
+  }
+
+  //navList start
+  .navBar {
+    @include flex(stretch, center);
+    position: relative;
+    width: 100%;
+    height: 120rpx;
+    background-color: #fff;
+    border-bottom: 2rpx solid #F6F6F6;
+
+    .navText {
+      margin-left: 30rpx;
+    }
+
+    .btnText {
+      background-color: #fff;
+      @extend %wh100;
+      @include flex(start, center);
+      font-size: 28rpx;
+    }
+
+    button::after {
+      border-style: none;
+    }
+
+    .navIcon {
+      @include position(relative, 2rpx);
+    }
+
+    .moreIcon {
+      position: absolute;
+      right: 5rpx;
+    }
+  }
+
+  //banner start
+  .banner {
+    width: 100%;
+    height: 178rpx;
+    margin: 30rpx 0;
+
+    .bannerImg {
+      @extend %wh100;
+      border-radius: 50rpx;
+    }
+  }
+}

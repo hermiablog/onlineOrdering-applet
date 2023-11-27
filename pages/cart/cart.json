@@ -1,0 +1,10 @@
+{
+  "usingComponents": {
+    "h-icon": "../../component/icon/icon",
+    "h-cartNum": "/component/cartNum/cartNum",
+    "van-submit-bar": "@vant/weapp/submit-bar/index",
+    "van-swipe-cell": "@vant/weapp/swipe-cell/index",
+    "h-empty-show": "/component/empty-Show/empty-Show"
+  },
+  "navigationBarTitleText": "购物车"
+}

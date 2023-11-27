@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "h-empty-show": "/component/empty-Show/empty-Show"
+  },
+  "navigationBarTitleText": "订单"
+}

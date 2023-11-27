@@ -1,0 +1,25 @@
+/**app.wxss**/
+/* 消除组件的默认样式 */
+page,
+navigator,
+swiper,
+swiper-item,
+image,
+input,
+view,
+scroll-view,
+button,
+text {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+page {
+  --themeColor: #FF5762;
+  font-size: 28rpx;
+  min-height: 100%;
+  color: #333;
+}
+
+/* 通用样式 */

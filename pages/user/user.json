@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "h-icon": "/component/icon/icon"
+  },
+  "navigationBarTitleText": "我的"
+}

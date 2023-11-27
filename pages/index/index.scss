@@ -1,0 +1,103 @@
+/**index.wxss**/
+@use "./index.skeleton";
+@use "../../sass//wh100";
+
+.container {
+  background-color: #EFEFEF;
+  height: 100%;
+
+  // swiper-section start 
+  .swiper-section {
+    width: 750rpx;
+    height: 755rpx;
+    background-color: #fffF;
+
+    swiper {
+      @extend %wh100;
+
+      .swiperItem {
+        @extend %wh100;
+
+        .swiper-img {
+          @extend %wh100;
+        }
+      }
+    }
+  }
+
+  // end swiper-section 
+  // takeWay start 
+  .takeWay {
+    display: flex;
+    height: 180rpx;
+    margin: 29rpx 23rpx;
+    border-radius: 24rpx;
+    background-color: #fff;
+
+    .takeBtn {
+      flex: 1;
+      align-items: center;
+      display: flex;
+      padding-left: 64rpx;
+      height: 100%;
+
+      .takeText {
+        margin-left: 32rpx;
+      }
+
+      .takeTitle {
+        color: var(--themeColor);
+        font-size: 40rpx;
+      }
+
+      .takeDesc {
+        color: #A0A0A0;
+        font-size: 24rpx;
+      }
+
+      .takeImg-1 {
+        width: 96rpx;
+        height: 86rpx;
+      }
+
+      .takeImg-2 {
+        width: 102rpx;
+        height: 82rpx;
+      }
+    }
+
+    .takeLine {
+      width: 2rpx;
+      height: 121rpx;
+      background-color: #F1F1F1;
+    }
+  }
+
+  // end takeWay 
+  // newProduct start 
+  .newProduct {
+    margin: 0 23rpx;
+
+    .newProduct-title {
+      color: #333;
+      font-size: 24rpx;
+    }
+
+    .newProduct-show {
+      width: 100%;
+      height: 240rpx;
+      margin: 20rpx 0;
+      border-radius: 20rpx;
+      overflow: hidden;
+      background-color: #fff;
+
+      .newProduct-img {
+        width: 100%;
+        height: 100%;
+        border-radius: 20rpx;
+      }
+    }
+  }
+
+  //end newProduct 
+}

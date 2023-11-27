@@ -1,0 +1,45 @@
+<!--pages/user/user.wxml-->
+<view class="container">
+  <!-- 未登录 -->
+  <view class="login" wx:if="{{!hasUserInfo}}">
+    <image class="avatar" src="https://img1.baidu.com/it/u=968888425,1758589611&fm=253&fmt=auto&app=138&f=JPEG?w=500&h=500" mode="" />
+    <view class="statusText">登录获取更多会员权益</view>
+    <button class="register" bind:tap="handleToLogin">授权登录</button>
+  </view>
+  <!-- 已登录 -->
+  <view class="login" wx:else>
+    <image class="avatar" src="{{userInfo.avatarUrl}}" mode="" />
+    <view class="statusText">Hi~ {{userInfo.nickName}}</view>
+    <button class="register" bind:tap="handleOutLogin">退出登录</button>
+  </view>
+  <view class="navList">
+    <view class="navBar order" wx:if="{{hasUserInfo}}">
+      <h-icon name="dingdan1" color="#FF5762" size="32" class="navIcon"></h-icon>
+      <view class="navText">个人订单</view>
+      <h-icon class="moreIcon" name="right-line" color="#CACAD6" size="34"></h-icon>
+    </view>
+    <view class="navBar order" wx:if="{{hasUserInfo}}">
+      <h-icon name="didian_dingwei" color="#FF5762" size="32" class="navIcon"></h-icon>
+      <view class="navText">收货地址</view>
+      <h-icon class="moreIcon" name="right-line" color="#CACAD6" size="34"></h-icon>
+    </view>
+    <view class="navBar news">
+      <h-icon name="gonggao_tongzhi" color="#FF5762" size="32" class="navIcon"></h-icon>
+      <view class="navText">系统消息</view>
+      <h-icon class="moreIcon" name="right-line" color="#CACAD6" size="34"></h-icon>
+    </view>
+    <view class="navBar service">
+      <h-icon name="kefu" color="#FF5762" size="32" class="navIcon"></h-icon>
+      <button open-type="contact" class="btnText navText">在线客服</button>
+      <h-icon class="moreIcon" name="right-line" color="#CACAD6" size="34"></h-icon>
+    </view>
+    <view class="navBar feedback">
+      <h-icon name="zhengzaijinhang" color="#FF5762" size="32" class="navIcon"></h-icon>
+      <button open-type="feedback" class="btnText navText">意见反馈</button>
+      <h-icon class="moreIcon" name="right-line" color="#CACAD6" size="34"></h-icon>
+    </view>
+  </view>
+  <navigator class="banner">
+    <image class="bannerImg" src="https://img2.baidu.com/it/u=1397334377,1103978532&fm=253&fmt=auto&app=138&f=JPEG?w=1024&h=453" mode="" />
+  </navigator>
+</view>

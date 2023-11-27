@@ -1,0 +1,42 @@
+<!--index.wxml-->
+<import src="index.skeleton.wxml" />
+<template is="skeleton" wx:if="{{loading}}" />
+<view class="container">
+  <h-navigation-bar></h-navigation-bar>
+  <!-- swiper start -->
+  <view class="swiper-section">
+    <swiper interval="{{2000}}" autoplay="{{true}}" circular="{{true}}">
+      <swiper-item class="swiperItem" wx:for="{{swiperList}}" wx:key="index">
+        <image class="swiper-img" src="{{item.url}}" mode="" />
+      </swiper-item>
+    </swiper>
+  </view>
+  <!-- end swiper -->
+  <!-- takeWay start -->
+  <view class="takeWay">
+    <view class="takeBtn" bind:tap="handleToMenu" data-index="0">
+      <image class="takeImg-1" src="/src/icon/takeBySelf.png" mode="" />
+      <view class="takeText">
+        <view class="takeTitle">自取</view>
+        <view class="takeDesc">即可点单</view>
+      </view>
+    </view>
+    <view class="takeLine"></view>
+    <view class="takeBtn" bind:tap="handleToMenu" data-index="1">
+      <image class="takeImg-2" src="/src/icon/waimai.png" mode="" />
+      <view class="takeText">
+        <view class="takeTitle">外卖</view>
+        <view class="takeDesc">无接触送</view>
+      </view>
+    </view>
+  </view>
+  <!-- end takeWay -->
+  <!-- newProduct start -->
+  <view class="newProduct">
+    <view class="newProduct-title">新品尝鲜</view>
+    <view class="newProduct-show" wx:for="{{newProductList}}" wx:key="index">
+      <image class="newProduct-img" src="{{item.url}}" mode="" />
+    </view>
+  </view>
+  <!-- end newProduct -->
+</view>

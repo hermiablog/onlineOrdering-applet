@@ -1,0 +1,30 @@
+/* component/inToCart/inToCart.wxss */
+.container {
+  display: flex;
+  justify-content: center;
+  align-self: center;
+  height: 40rpx;
+}
+
+.num {
+  padding: 0 24rpx;
+}
+
+.numBtn {
+  padding: 0;
+}
+
+.add {
+  position: relative;
+  top: -3rpx;
+}
+
+.disable {
+  color: #ccc;
+  pointer-events: none;
+}
+
+.active {
+  color: #FF5762;
+  pointer-events: auto;
+}

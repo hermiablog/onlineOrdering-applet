@@ -1,0 +1,6 @@
+{
+  "component": true,
+  "usingComponents": {
+    "h-cartNum": "/component/cartNum/cartNum"
+  }
+}

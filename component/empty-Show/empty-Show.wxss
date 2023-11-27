@@ -1,0 +1,56 @@
+/* component/empty-Show/empty-Show.wxss */
+.container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* empty start */
+.emptyCart {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 80%;
+  height: 80%;
+  background-color: #fff;
+}
+
+.emptyImg {
+  width: 318rpx;
+  height: 307rpx;
+  margin-top: 86rpx;
+}
+
+.emptyDesc {
+  width: 350rpx;
+  height: 65rpx;
+  display: flex;
+  flex-direction: column;
+  font-size: 24rpx;
+  color: #999999;
+  text-align: center;
+  margin-top: 40rpx;
+  line-height: 47rpx;
+}
+
+.toOrder:not([size=mini]) {
+  width: 421rpx;
+  height: 87rpx;
+  margin-top: 100rpx;
+  background-image: linear-gradient(to right, #FF7B62, #FF5762);
+  border-radius: 44rpx;
+  color: #fff;
+  font-size: 32rpx;
+  font-weight: 400;
+  letter-spacing: 6rpx;
+}
+
+.historyOrder {
+  margin: 26rpx;
+  color: #999999;
+  font-size: 26rpx;
+}
+
+/* end empty  */

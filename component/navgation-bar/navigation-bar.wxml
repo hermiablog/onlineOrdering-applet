@@ -1,0 +1,15 @@
+<!--component/navgation-bar/navigation-bar.wxml-->
+<view class="container">
+  <view class="topNavBar">
+    <view class="statusBar" style="{{statusBarStyle}}"></view>
+    <view class="topNav" style="{{topNavStyle}}">
+      <view class="navigationBar" style="{{navigationBarStyle}}">
+        <view class="search">
+          <input type="text" class="search-bar" placeholder="咖啡 · 奶茶 · 零食" placeholder-style="font-size:26rpx;" bind:input="handlerInput" />
+          <h-icon name="sousuo1" color="#A0A0A0" class="search-icon" wx:if="{{iconShow}}"></h-icon>
+        </view>
+      </view>
+    </view>
+    <view class="topMenu" style="{{menuStyle}}"></view>
+  </view>
+</view>

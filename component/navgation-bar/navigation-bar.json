@@ -1,0 +1,6 @@
+{
+  "component": true,
+  "usingComponents": {
+    "h-icon": "/component/icon/icon"
+  }
+}

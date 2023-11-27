@@ -1,0 +1,12 @@
+<!--component/empty-Show/empty-Show.wxml-->
+<view class="container">
+  <view class="emptyCart">
+    <image class="emptyImg" src="../../src/icon/emptyCart.png" mode="" />
+    <view class="emptyDesc">
+      <text>您今天还没有下单</text>
+      <text>快去选择一杯喜欢的饮料吧</text>
+    </view>
+    <button class="toOrder" bind:tap="handleToOrder">去点单</button>
+    <view hidden="{{type=='order'}}" class="historyOrder" bind:tap="handleToHistory">历史订单</view>
+  </view>
+</view>

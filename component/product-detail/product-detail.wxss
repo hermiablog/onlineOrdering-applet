@@ -1,0 +1,122 @@
+/* component/product-detail/product-detail.wxss */
+.container {
+  width: 100%;
+  /* min-height: 100%; */
+  height: 100%;
+}
+
+.mask {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  min-height: 100%;
+  background-color: #000;
+  opacity: 0.6;
+  z-index: 100;
+}
+
+.product-detail {
+  position: absolute;
+  top: 4%;
+  left: 5%;
+  width: 670rpx;
+  height: 1000rpx;
+  background-color: #fff;
+  z-index: 199;
+  border-radius: 20rpx;
+}
+
+.detailImg {
+  width: 100%;
+  height: 312rpx;
+  border-radius: 20rpx 20rpx 0 0;
+}
+
+.product-info {
+  padding: 0 35rpx;
+}
+
+.detailName {
+  height: 80rpx;
+  line-height: 80rpx;
+  font-size: 28rpx;
+}
+
+.detailSpecs {
+  width: 100%;
+}
+
+.specs-category {
+  display: flex;
+  align-items: center;
+  height: 54rpx;
+  margin: 23rpx 0;
+}
+
+.specsTitle {
+  font-size: 26rpx;
+  min-width: 70rpx;
+  letter-spacing: 6rpx;
+}
+
+.specsDetail {
+  background-color: #F9F9F8;
+  color: #666666;
+  min-width: 120rpx;
+  height: 100%;
+  line-height: 54rpx;
+  border-radius: 8rpx;
+  text-align: center;
+  margin: 0 20rpx;
+}
+
+.selected {
+  background-image: linear-gradient(to right, #FF7B62, #FF5762);
+  color: #fff;
+}
+
+.detail-desc {
+  font-size: 24rpx;
+  color: #666666;
+  padding: 23rpx 0 17rpx 0;
+  border-top: 2rpx solid #EEEEEE;
+  border-bottom: 2rpx solid #EEEEEE;
+}
+
+.price-num {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  height: 40rpx;
+  margin: 30rpx 0;
+}
+
+.favorablePrice {
+  color: var(--themeColor);
+  font-size: 36rpx;
+}
+
+.getToCart:not([size=mini]) {
+  width: 599rpx;
+  height: 72rpx;
+  color: #F9F9F8;
+  font-size: 28rpx;
+  font-weight: 400;
+  letter-spacing: 6rpx;
+  background-image: linear-gradient(to right, #FF7B62, #FF5762);
+}
+
+.closeBtn {
+  position: absolute;
+  top: 15rpx;
+  right: 22rpx;
+  width: 46rpx;
+  height: 46rpx;
+  color: #fff;
+  background-color: rgba(0, 0, 0, 0.2);
+  text-align: center;
+  line-height: 46rpx;
+  border-radius: 50%;
+}

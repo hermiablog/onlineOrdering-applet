@@ -1,0 +1,69 @@
+<!--
+此文件为开发者工具生成，生成时间: 2023/10/27下午7:20:12
+使用方法：
+在 D:\web\weAppProject\order-online\pages\index\index.wxml 引入模板
+
+```
+<import src="index.skeleton.wxml"/>
+<template is="skeleton" wx:if="{{loading}}" />
+```
+
+在 D:\web\weAppProject\order-online\pages\index\index.wxss 中引入样式
+```
+@import "./index.skeleton.wxss";
+```
+
+更多详细信息可以参考文档：https://developers.weixin.qq.com/miniprogram/dev/devtools/skeleton.html
+-->
+<template name="skeleton">
+  <view class="sk-container">
+    <view class="container">
+      <view is="component/navgation-bar/navigation-bar">
+        <view class="bar--container">
+          <view class="bar--topNavBar">
+            <view class="bar--statusBar" style="top: 0px; left: 0px; width: 375px; height: 20px;"></view>
+            <view class="bar--topNav" style="top: 20px; left: 0px; width: 375px; height: 40px;">
+              <view class="bar--navigationBar" style="top: 24px; left: 7px; width: 267px; height: 32px;">
+                <view class="bar--search">
+                  <view class="bar--search-bar sk-image" placeholder="咖啡 · 奶茶 · 零食" placeholder-style="font-size:13px;" type="text"></view>
+                  <view is="component/icon/icon" class="bar--search-icon">
+                    <view class="icon--container">
+                      <view class="icon--iconfont icon--icon-sousuo1 sk-pseudo sk-pseudo-circle" style="font-size: 13px; color: #A0A0A0;"></view>
+                    </view>
+                  </view>
+                </view>
+              </view>
+            </view>
+            <view class="bar--topMenu" style="top: 24px; left: 281px; width: 87px; height: 32px;"></view>
+          </view>
+        </view>
+      </view>
+      <view class="swiper-section"></view>
+      <view class="takeWay">
+        <view class="takeBtn" data-index="0">
+          <image class="takeImg-1 sk-image" mode="true"></image>
+          <view class="takeText">
+            <view class="takeTitle sk-transparent sk-text-14-2857-471 sk-text">自取</view>
+            <view class="takeDesc sk-transparent sk-text-14-2857-705 sk-text">即可点单</view>
+          </view>
+        </view>
+        <view class="takeLine"></view>
+        <view class="takeBtn" data-index="1">
+          <image class="takeImg-2 sk-image" mode="true"></image>
+          <view class="takeText">
+            <view class="takeTitle sk-transparent sk-text-14-2857-47 sk-text">外卖</view>
+            <view class="takeDesc sk-transparent sk-text-14-2857-209 sk-text">无接触送</view>
+          </view>
+        </view>
+      </view>
+      <view class="newProduct">
+        <view class="newProduct-title">
+          <text class="sk-transparent sk-text-14-2857-998 sk-text">新品尝鲜</text>
+        </view>
+        <view class="newProduct-show"></view>
+        <view class="newProduct-show"></view>
+        <view class="newProduct-show"></view>
+      </view>
+    </view>
+  </view>
+</template>

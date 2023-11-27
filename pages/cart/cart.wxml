@@ -1,0 +1,44 @@
+<!--pages/cart/cart.wxml-->
+<view class="container">
+  <view class="empty" wx:if="{{cartInfo.length==0}}">
+    <h-empty-show></h-empty-show>
+  </view>
+  <view class="cartSwrap" wx:if="{{cartInfo.length!=0}}">
+    <scroll-view scroll-y="true" class="contentCart">
+      <van-swipe-cell right-width="{{ 80 }}" wx:for="{{cartInfo}}" wx:key="index">
+        <van-cell-group class="cartList">
+          <view class="selectIcon" bind:tap="handleSelect" data-index="{{index}}">
+            <h-icon wx:if="{{item.selected}}" name="chenggong" color="#FF5762" size="38"></h-icon>
+            <h-icon name="weixuanzhong" size="38" color="#C6C6C6" wx:else=""></h-icon>
+          </view>
+          <view class="carInfoSwrap">
+            <image src="{{item.productImg}}" mode="" class="cover" />
+            <view class="cartShow">
+              <view class="cartTittle">{{item.productName}}</view>
+              <view class="specs">
+                <view class="cartspecs" wx:for="{{item.specs}}" wx:key="index" wx:for-item="specsItem">
+                  <block wx:for="{{specsItem.specsDesc}}" wx:key="index">
+                    {{item.isActive?item.title:''}}
+                  </block>
+                </view>
+              </view>
+              <view class="cart-price-num">
+                <view class="cartPrice">￥{{item.favorablePrice}}</view>
+                <h-cartNum bind:changePrice="handleChangeNum" data-index="{{index}}" num="{{item.numInCart}}" maxNum="{{item.stock}}" isMinClick="{{true}}" isAddClick="{{true}}"></h-cartNum>
+              </view>
+            </view>
+          </view>
+        </van-cell-group>
+        <view slot="right" class="van-swipe-cell__right sliderDelete" bind:tap="handleDelete" data-index="{{index}}">删除</view>
+      </van-swipe-cell>
+    </scroll-view>
+    <van-submit-bar price="{{payMoney}}" button-text="去结算({{selectProductNum}})" bind:submit="{{selectProductNum>0?'onClickButton' :''}}" class="submitBar {{selectProductNum>0?'submitActive' :''}}">
+      <van-tag type="primary" class="selectAll">
+        <h-icon name="weixuanzhong" size="38" color="#C6C6C6" bind:tap="handleSelectAllBtn" wx:if="{{selectedAll==false}}"></h-icon>
+        <h-icon wx:else name="chenggong" color="#FF5762" size="38" bind:tap="handleSelectAllBtn"></h-icon>
+        <text>全选</text>
+      </van-tag>
+    </van-submit-bar>
+
+  </view>
+</view>

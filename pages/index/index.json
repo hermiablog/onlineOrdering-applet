@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "h-navigation-bar": "/component/navgation-bar/navigation-bar",
+    "h-icon": "/component/icon/icon"
+  },
+  "navigationStyle": "custom"
+}

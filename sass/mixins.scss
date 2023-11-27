@@ -1,0 +1,26 @@
+//flex布局
+@mixin flex($justify:stretch, $align:stretch, $dir:row) {
+  display: flex;
+  flex-direction: $dir;
+  justify-content: $justify;
+  align-items: $align;
+  @content;
+}
+
+//定位
+@mixin position($position, $top:0, $left:0) {
+  position: $position;
+  top: $top;
+  left: $left;
+  @content;
+}
+
+//文字溢出省略
+@mixin singleline-ellipsis($min-width, $max-width, $line-clamp: 1) {
+  min-width: $min-width;
+  max-width: $max-width;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: $line-clamp;
+  overflow: hidden;
+}

@@ -1,0 +1,6 @@
+<!--component/inToCart/inToCart.wxml-->
+<view class="container">
+  <h-icon class="numBtn" name="shanjian" size="36" bind:tap="{{isMinClick?'handleCartNum':''}}" data-step="-1" outer-css="{{num<=minNum?'disable':'active'}}"></h-icon>
+  <view class="num">{{num}}</view>
+  <h-icon class="numBtn add" name="zengjia1" size="42" bind:tap="{{isAddClick?'handleCartNum':''}}" data-step="1" outer-css="{{num>=maxNum?'disable':'active'}}"></h-icon>
+</view>

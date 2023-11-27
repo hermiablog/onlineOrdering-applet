@@ -1,0 +1,154 @@
+<!--
+此文件为开发者工具生成，生成时间: 2023/10/27下午7:45:37
+使用方法：
+在 D:\web\weAppProject\order-online\pages\menu\menu.wxml 引入模板
+
+```
+<import src="menu.skeleton.wxml"/>
+<template is="skeleton" wx:if="{{loading}}" />
+```
+
+在 D:\web\weAppProject\order-online\pages\menu\menu.wxss 中引入样式
+```
+@import "./menu.skeleton.wxss";
+```
+
+更多详细信息可以参考文档：https://developers.weixin.qq.com/miniprogram/dev/devtools/skeleton.html
+-->
+<template name="skeleton">
+  <view class="sk-container">
+    <view class="container">
+      <view class="topBar">
+        <view class="position">
+          <view class="position-Name">
+            <view is="component/icon/icon">
+              <view class="icon--container">
+                <view class="icon--iconfont icon--icon-dingwei sk-pseudo sk-pseudo-circle" style="font-size: 17px; color: #333;"></view>
+              </view>
+            </view>
+            <view class="shopName sk-transparent sk-text-14-2857-693 sk-text">广州市天河体育中心店</view>
+            <view is="component/icon/icon">
+              <view class="icon--container">
+                <view class="icon--iconfont icon--icon-right-line sk-pseudo sk-pseudo-circle" style="font-size: 17px; color: #999999;"></view>
+              </view>
+            </view>
+          </view>
+          <view class="distance sk-transparent sk-text-14-2857-885 sk-text">距离您25.8km</view>
+        </view>
+        <view class="takeWay">
+          <view class="takeBtn sk-transparent sk-text-22-0000-550 sk-text" data-index="0" style="background-position-x: 50%;">自取</view>
+          <view class="takeBtn show sk-transparent sk-text-22-0000-543 sk-text" data-index="1" style="background-position-x: 50%;">外卖</view>
+        </view>
+      </view>
+      <view class="productMenu">
+        <scroll-view class="leftBar" scroll-y="true">
+          <view class="category active-category" data-index="0">
+            <view class="divider active-divider"></view>
+            <view class="category-name sk-transparent sk-text-14-2857-613 sk-text" style="background-position-x: 50%;">人气 TOP</view>
+          </view>
+          <view class="category" data-index="1">
+            <view class="divider"></view>
+            <view class="category-name sk-transparent sk-text-14-2857-168 sk-text" style="background-position-x: 50%;">爆款套餐</view>
+          </view>
+          <view class="category" data-index="2">
+            <view class="divider"></view>
+            <view class="category-name sk-transparent sk-text-14-2857-994 sk-text" style="background-position-x: 50%;">咖啡</view>
+          </view>
+          <view class="category" data-index="3">
+            <view class="divider"></view>
+            <view class="category-name sk-transparent sk-text-14-2857-126 sk-text" style="background-position-x: 50%;">奶茶</view>
+          </view>
+          <view class="category" data-index="4">
+            <view class="divider"></view>
+            <view class="category-name sk-transparent sk-text-14-2857-820 sk-text" style="background-position-x: 50%;">甜品小点</view>
+          </view>
+          <view class="category" data-index="5">
+            <view class="divider"></view>
+            <view class="category-name sk-transparent sk-text-14-2857-848 sk-text" style="background-position-x: 50%;">水果茶</view>
+          </view>
+          <view class="category" data-index="6">
+            <view class="divider"></view>
+            <view class="category-name sk-transparent sk-text-14-2857-404 sk-text" style="background-position-x: 50%;">烘焙轻食</view>
+          </view>
+          <view class="category" data-index="7">
+            <view class="divider"></view>
+            <view class="category-name sk-transparent sk-text-14-2857-868 sk-text" style="background-position-x: 50%;">纯茶</view>
+          </view>
+        </scroll-view>
+        <scroll-view class="rightBar" scroll-y="true">
+          <image class="topBanner-img sk-image" mode="aspectFill"></image>
+          <view class="menuList">
+            <view class="categoryItem">
+              <view class="categoryTitle sk-transparent sk-text-14-2857-84 sk-text">人气 TOP</view>
+              <view class="product-list" data-id="100101">
+                <image class="product-cover sk-image" mode="true"></image>
+                <view class="product-show">
+                  <view class="product-title sk-transparent sk-text-14-2857-792 sk-text">生酪拿铁</view>
+                  <view class="product-desc sk-transparent sk-text-14-2857-190 sk-text">年度拿铁中测冠军</view>
+                  <view class="price-num">
+                    <view class="product-price sk-transparent sk-text-14-2857-46 sk-text">￥ 18
+                    </view>
+                    <view is="component/icon/icon">
+                      <view class="icon--container">
+                        <view class="icon--iconfont icon--icon-zengjia1 sk-pseudo sk-pseudo-circle" style="font-size: 21px; color: #FF5762;"></view>
+                      </view>
+                    </view>
+                  </view>
+                </view>
+              </view>
+              <view class="product-list" data-id="100102">
+                <image class="product-cover sk-image" mode="true"></image>
+                <view class="product-show">
+                  <view class="product-title sk-transparent sk-text-14-2857-590 sk-text">丝绒拿铁</view>
+                  <view class="product-desc sk-transparent sk-text-14-2857-403 sk-text">甘甜丝滑</view>
+                  <view class="price-num">
+                    <view class="product-price sk-transparent sk-text-14-2857-937 sk-text">￥ 21
+                    </view>
+                    <view is="component/icon/icon">
+                      <view class="icon--container">
+                        <view class="icon--iconfont icon--icon-zengjia1 sk-pseudo sk-pseudo-circle" style="font-size: 21px; color: #FF5762;"></view>
+                      </view>
+                    </view>
+                  </view>
+                </view>
+              </view>
+              <view class="product-list" data-id="100103">
+                <image class="product-cover sk-image" mode="true"></image>
+                <view class="product-show">
+                  <view class="product-title sk-transparent sk-text-14-2857-258 sk-text">相思红豆拿铁</view>
+                  <view class="product-desc sk-transparent sk-text-14-2857-296 sk-text">据说是王维诗里的红豆</view>
+                  <view class="price-num">
+                    <view class="product-price sk-transparent sk-text-14-2857-185 sk-text">￥ 21
+                    </view>
+                    <view is="component/icon/icon">
+                      <view class="icon--container">
+                        <view class="icon--iconfont icon--icon-zengjia1 sk-pseudo sk-pseudo-circle" style="font-size: 21px; color: #FF5762;"></view>
+                      </view>
+                    </view>
+                  </view>
+                </view>
+              </view>
+              <view class="product-list" data-id="100104">
+                <image class="product-cover sk-image" mode="true"></image>
+                <view class="product-show">
+                  <view class="product-title sk-transparent sk-text-14-2857-202 sk-text">生椰拿铁</view>
+                  <view class="product-desc sk-transparent sk-text-14-2857-80 sk-text">人气爆款，YYDS 无限回归</view>
+                  <view class="price-num">
+                    <view class="product-price sk-transparent sk-text-14-2857-872 sk-text">￥ 18
+                    </view>
+                    <view is="component/icon/icon">
+                      <view class="icon--container">
+                        <view class="icon--iconfont icon--icon-zengjia1 sk-pseudo sk-pseudo-circle" style="font-size: 21px; color: #FF5762;"></view>
+                      </view>
+                    </view>
+                  </view>
+                </view>
+              </view>
+            </view>
+          </view>
+        </scroll-view>
+      </view>
+      <view is="component/product-detail/product-detail"></view>
+    </view>
+  </view>
+</template>

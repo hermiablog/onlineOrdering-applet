@@ -1,0 +1,26 @@
+<!--component/product-detail/product-detail.wxml-->
+<view class="container" hidden="{{detailFlag}}">
+  <view class="mask"></view>
+  <view class="product-detail">
+    <image class="detailImg" src="{{detailInfo.productBannerImg}}" mode="aspectFill" />
+    <view class="product-info">
+      <view class="detailName">{{detailInfo.productName}}</view>
+      <view class="detailSpecs">
+        <view class="specs-category" wx:for="{{detailInfo.specs}}" wx:key="id" wx:for-item="specs">
+          <view class="specsTitle">{{specs.specsName}}</view>
+          <block wx:for="{{specs.specsDesc}}" wx:key="id" wx:for-item="specsDesc">
+            <view class="specsDetail {{specsDesc.isActive ? 'selected' : ''}}" bind:tap="handleSelected" data-specs-id="{{specs.id}}" data-specs-item-id="{{specsDesc.id}}" data-specs-desc="{{specs.specsDesc}}">{{specsDesc.title}} </view>
+          </block>
+        </view>
+      </view>
+      <view class="detail-desc">{{detailInfo.detailDesc}}</view>
+      <view class="price-num">
+        <view class="favorablePrice">￥{{totalMoney===0?detailInfo.favorablePrice:totalMoney}}</view>
+        <!-- 数量组件 -->
+        <h-cartNum bind:changePrice="handlechangePrice" maxNum="{{detailInfo.stock}}" minNum="{{minNum}}" num="{{productNum}}" isMinClick="{{isMinClick}}" isAddClick="{{isAddClick}}"></h-cartNum>
+      </view>
+      <button class="getToCart" bind:tap="handleToCart">加入购物车</button>
+    </view>
+    <view class="closeBtn" bind:tap="handleCloseDetail">X</view>
+  </view>
+</view>

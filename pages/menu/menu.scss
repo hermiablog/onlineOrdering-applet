@@ -1,0 +1,200 @@
+/* pages/menu/menu.wxss */
+@use "menu.skeleton";
+@use "../../sass/mixins"as *;
+@use "../../sass//wh100";
+
+.container {
+  position: relative;
+  height: 100vh;
+
+  // 去掉滚动条
+  ::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+    color: transparent;
+  }
+
+  // topBar start 
+  .topBar {
+
+    // 提高层级，让topBar的阴影在菜单上面 
+    @include position(sticky) {
+      z-index: 99;
+    }
+
+    @include flex(space-between);
+    width: 100%;
+    height: 161rpx;
+    padding-top: 20rpx;
+    box-shadow: 0rpx 10rpx 10rpx 0rpx rgba(0, 0, 0, 0.08);
+    background-color: #fff;
+
+    .position {
+      @include flex(center, stretch, column);
+
+      .position-Name {
+        @include flex(stretch, center);
+        padding-left: 36rpx;
+
+        .shopName {
+          padding: 0 5rpx;
+          font-size: 36rpx;
+          @include singleline-ellipsis(150rpx, 220rpx);
+        }
+      }
+
+      .distance {
+        padding-left: 78rpx;
+        padding-top: 24rpx;
+        color: #999999;
+        font-size: 26rpx;
+      }
+    }
+
+    .takeWay {
+      @include flex();
+      width: 193rpx;
+      height: 62rpx;
+      padding: 6rpx 7rpx;
+      font-size: 28rpx;
+      margin: 20rpx 21rpx;
+      background-color: #F6F6F6;
+      border-radius: 25rpx;
+    }
+
+    .takeBtn {
+      width: 97rpx;
+      height: 50rpx;
+      text-align: center;
+      line-height: 50rpx;
+      border-radius: 25rpx;
+      color: #999999;
+    }
+
+    .show {
+      background-color: var(--themeColor);
+      color: #fff;
+      transition: all .3s ease;
+    }
+  }
+
+  // end topBar 
+
+  // productMenu start 
+  .productMenu {
+    width: 100%;
+    @include flex();
+
+    @include position(fixed, 161rpx, 0) {
+      bottom: 0;
+    }
+
+    // leftBar start 
+    .leftBar {
+      width: 180rpx;
+      height: 100%;
+      background-color: #F6F6F6;
+
+      .category {
+        @include flex(stretch, center);
+        color: #A0A0A0;
+        height: 120rpx;
+      }
+
+      .category-name {
+        width: 172rpx;
+        font-size: 32rpx;
+        text-align: center;
+      }
+
+      .active-category {
+        color: var(--themeColor);
+        background-color: #fff;
+      }
+
+      .divider {
+        width: 8rpx;
+        height: 100%;
+      }
+
+      .active-divider {
+        background-color: var(--themeColor);
+      }
+    }
+
+    // end leftBar 
+    // rightBar start 
+    .rightBar {
+      @extend %wh100;
+      padding: 37rpx 29rpx 0 35rpx;
+
+      .topBanner-img {
+        width: 100%;
+        height: 183rpx;
+      }
+
+      // menuList start 
+      .categoryItem {
+        padding-bottom: 30rpx;
+      }
+
+      .categoryTitle {
+        font-size: 36rpx;
+        color: #333;
+        margin: 26rpx 0;
+      }
+
+      .product-cover {
+        width: 140rpx;
+        height: 140rpx;
+      }
+
+      .product-list {
+        width: 100%;
+        @include flex();
+        height: 140rpx;
+        margin-bottom: 32rpx;
+      }
+
+      .product-cover {
+        margin-right: 25rpx;
+        border-radius: 20rpx;
+      }
+
+      .product-title {
+        font-size: 28rpx;
+        color: #333;
+      }
+
+      .product-show {
+        flex: 1;
+        @include flex(center, stretch, column);
+      }
+
+      .product-desc {
+        color: #999;
+        font-size: 22rpx;
+        margin: 10rpx 0 15rpx 0;
+      }
+
+      .price-num {
+        width: 100%;
+        @include flex(space-between);
+      }
+
+      .product-price {
+        color: var(--themeColor);
+      }
+
+      .emptyContent {
+        color: #999;
+        @include flex(center)
+      }
+    }
+
+    // end rightBar 
+
+  }
+
+  // end productMenu 
+}

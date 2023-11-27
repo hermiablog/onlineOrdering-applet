@@ -1,0 +1,48 @@
+/* component/navgation-bar/navigation-bar.wxss */
+.statusBar,
+.topNav,
+.navigationBar,
+.topMenu {
+  position: fixed;
+  z-index: 99;
+}
+
+/* 顶部导航栏样式 */
+/* 
+.statusBar {
+  background-color: palegoldenrod;
+}
+
+.topNav {
+  background-color: palegreen;
+}
+
+.navigationBar {
+  background-color: paleturquoise;
+}
+
+.topMenu {
+  background-color: tomato;
+} */
+
+.search {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.search-bar {
+  height: 100%;
+  border-radius: 50rpx;
+  text-align: center;
+  border: 1px solid rgba(184, 184, 184, 0.5);
+  color: #333;
+  background-color: rgba(255, 255, 255, 0.6);
+}
+
+.search-icon {
+  position: absolute;
+  top: 50%;
+  left: 110rpx;
+  transform: translateY(-40%);
+}

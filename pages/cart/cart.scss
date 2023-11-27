@@ -1,0 +1,130 @@
+/* pages/cart/cart.wxss */
+@use "../../sass//mixins"as *;
+@use "../../sass//wh100";
+
+.container {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  background-color: #F5F5F5;
+  // empty start
+
+  .empty {
+    width: 100%;
+    height: 100%;
+  }
+
+  // end empty
+  // cartSwrap start
+
+  .cartSwrap {
+    @extend %wh100;
+    background-color: #fff;
+
+    .contentCart {
+      width: 100%;
+      min-height: 100%;
+      padding: 0rpx 0 100rpx 0;
+      background-color: #fff;
+
+      .cartList {
+        width: 100%;
+        @include flex(stretch, center);
+        height: 225rpx;
+
+        .selectIcon {
+          width: 109rpx;
+          height: 150rpx;
+          text-align: center;
+          line-height: 150rpx;
+        }
+
+        .carInfoSwrap {
+          flex: 1;
+          @include flex(stretch, center);
+          height: 100%;
+          border-bottom: 2rpx solid #F0F0F0;
+          padding-right: 38rpx;
+
+          .cover {
+            width: 150rpx;
+            height: 150rpx;
+            margin-right: 30rpx;
+          }
+
+          .cartShow {
+            flex: 1;
+
+            .cartTittle {
+              font-size: 28rpx;
+            }
+
+            .specs {
+              @include flex();
+              letter-spacing: 2px;
+              margin: 14rpx 0 23rpx 0;
+            }
+
+            .cartspecs {
+              font-size: 22rpx;
+              color: #999999;
+              letter-spacing: 0;
+              margin-right: 5rpx;
+            }
+
+            .cartspecs:nth-child(1)::after {
+              content: "/";
+            }
+
+            .cartspecs:nth-child(2)::after {
+              content: "/";
+            }
+
+            .cart-price-num {
+              @include flex(space-between);
+            }
+          }
+        }
+      }
+
+      /* vant删除滑块  */
+      .sliderDelete {
+        @include flex(center, center);
+        width: 160rpx;
+        height: 100%;
+        background-image: linear-gradient(to right, #FF7B62, #FF5762);
+        color: #fff;
+      }
+    }
+
+    // vant结算组件 
+    .submitBar {
+      --button-danger-background-color: #ccc;
+      --button-border-width: #ccc;
+      --submit-bar-price-color: var(--themeColor);
+      --submit-bar-text-color: #999;
+    }
+
+    .van-submit-bar {
+      border-top: 1rpx solid #EEEEEE;
+    }
+
+    .van-button__text {
+      letter-spacing: 3rpx;
+    }
+
+    .submitActive {
+      --button-danger-background-color: linear-gradient(to right, #FF7B62, #FF5762);
+      --button-border-width: linear-gradient(to right, #FF7B62, #FF5762);
+    }
+
+    .selectAll {
+      width: 110rpx;
+      @include flex(space-between);
+      color: #999;
+    }
+  }
+
+  // end cartSwrap
+}

@@ -1,0 +1,8 @@
+{
+  "navigationBarTitleText": "菜单",
+  "usingComponents": {
+    "h-icon": "/component/icon/icon",
+    "h-product-detail": "../../component/product-detail/product-detail"
+  },
+  "disableScroll": true
+}
