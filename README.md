@@ -1,5 +1,5 @@
 ## 效果
-<img src="https://github.com/hermiablog/onlineOrdering-applet/blob/master/src/image/main.png" width="200" height="300"><img src="https://github.com/hermiablog/onlineOrdering-applet/blob/master/src/image/menu.png" width="200" height="300"><img src="https://github.com/hermiablog/onlineOrdering-applet/blob/master/src/image/order.png" width="200" height="300"><img src="https://github.com/hermiablog/onlineOrdering-applet/blob/master/src/image/cart.png" width="200" height="300"><img src="https://github.com/hermiablog/onlineOrdering-applet/blob/master/src/image/me.png" width="200" height="300">
+<img src="https://github.com/hermiablog/onlineOrdering-applet/blob/master/src/image/main.png" width="200"><img src="https://github.com/hermiablog/onlineOrdering-applet/blob/master/src/image/menu.png" width="200"><img src="https://github.com/hermiablog/onlineOrdering-applet/blob/master/src/image/order.png" width="200"><img src="https://github.com/hermiablog/onlineOrdering-applet/blob/master/src/image/cart.png" width="200"><img src="https://github.com/hermiablog/onlineOrdering-applet/blob/master/src/image/me.png" width="200">
 
 ## 项目创建过程
 #### 准备工作
