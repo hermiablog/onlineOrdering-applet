@@ -1,9 +1,9 @@
 ## 效果
-![首页](["./src/image/main.png"](https://github.com/hermiablog/onlineOrdering-applet/blob/master/src/image/main.png))
-![菜单页](["./src/image/menu.png"](https://github.com/hermiablog/onlineOrdering-applet/blob/master/src/image/menu.png))
-![订单页](["./src/image/order.png"](https://github.com/hermiablog/onlineOrdering-applet/blob/master/src/image/order.png))
-![购物车](["./src/image/cart.png"](https://github.com/hermiablog/onlineOrdering-applet/blob/master/src/image/cart.png))
-![我的](["./src/image/me.png"](https://github.com/hermiablog/onlineOrdering-applet/blob/master/src/image/me.png))
+![首页](https://github.com/hermiablog/onlineOrdering-applet/blob/master/src/image/main.png)
+![菜单页](https://github.com/hermiablog/onlineOrdering-applet/blob/master/src/image/menu.png)
+![订单页](https://github.com/hermiablog/onlineOrdering-applet/blob/master/src/image/order.png)
+![购物车](https://github.com/hermiablog/onlineOrdering-applet/blob/master/src/image/cart.png)
+![我的](https://github.com/hermiablog/onlineOrdering-applet/blob/master/src/image/me.png)
 
 ## 项目创建过程
 #### 准备工作
